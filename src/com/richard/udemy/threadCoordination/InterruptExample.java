@@ -6,6 +6,8 @@ import java.math.BigInteger;
 /**
  * When calling interrupt() from another thread.
  * We need to have isInterrupted() check in the interrupted thread.
+ *
+ * interrupt() will cause Thread.sleep throw InterruptedException
  */
 public class InterruptExample {
     public static void main(String[] args) {
@@ -46,12 +48,19 @@ public class InterruptExample {
         private BigInteger pow(BigInteger base, BigInteger power) {
             BigInteger result = BigInteger.ONE;
             for (BigInteger i = BigInteger.ZERO; i.compareTo(power) != 0; i.add(BigInteger.ONE)){
+                try {
+                    Thread.sleep(5000);
+
+                } catch (InterruptedException ex) {
+                    System.out.println("InterruptedException");
+                    return new BigInteger("0");
+                }
                 /**
                  *  This part is required when we are using interrupt()
                  */
-                if (Thread.currentThread().isInterrupted()) {
-                    return BigInteger.ZERO;
-                }
+//                if (Thread.currentThread().isInterrupted()) {
+//                    return BigInteger.ZERO;
+//                }
                 result = result.multiply(base);
             }
             return result;
