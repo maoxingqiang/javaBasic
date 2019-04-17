@@ -2,7 +2,13 @@ package com.richard.basic;
 
 public class ThreadDemo extends Thread{
 
+    /**
+     * Class 锁
+     */
     final static Object staticLock = new Object();
+    /**
+     * 对象锁
+     */
     final Object lock = new Object();
 
     String name;
