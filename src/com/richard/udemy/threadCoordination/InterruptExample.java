@@ -12,6 +12,7 @@ import java.math.BigInteger;
 public class InterruptExample {
     public static void main(String[] args) {
         Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("10000000000")));
+        thread.setDaemon(true);
         thread.start();
         thread.interrupt();
     }
