@@ -1,5 +1,9 @@
 package com.richard.udemy;
 
+/**
+ * Runnable lambda expression
+    thread method: start(), sleep(), setName, setPriority, setUncaughtExceptionHandler(function)
+ */
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
