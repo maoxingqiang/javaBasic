@@ -4,14 +4,14 @@ package com.richard.udemy;
  * Runnable lambda expression
     thread method: start(), sleep(), setName, setPriority, setUncaughtExceptionHandler(function)
  */
-public class Main {
+public class ThreadCreation {
 
     public static void main(String[] args) throws InterruptedException {
         //new Runnable() void run()
         Thread  thread = new Thread(() -> {
                 System.out.println("We are in thread: " + Thread.currentThread().getName() + " running this thread.");
                 System.out.println("We are in thread: " + Thread.currentThread().getPriority() + " current priority.");
-            throw new RuntimeException("hahahhahahh hehehehehheh");
+            throw new RuntimeException("This is the sample runtime exception hehehehehheh");
 
         });
         thread.setName("sb123");
