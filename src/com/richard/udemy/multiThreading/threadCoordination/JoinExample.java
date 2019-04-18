@@ -1,4 +1,4 @@
-package com.richard.udemy.threadCoordination;
+package com.richard.udemy.multiThreading.threadCoordination;
 
 import java.math.BigInteger;
 import java.util.*;
@@ -8,7 +8,7 @@ import java.util.*;
  * Do not rely on the order of execution
  * Always use thread coordination
  * Design code for worst case scenario
- * Threads may take unreasonably long time and ALWAYS use the Thread.join() with a time limit. 
+ * Threads may take unreasonably long time and ALWAYS use the Thread.join() with a time limit.
  */
 public class JoinExample {
     public static void main(String[] args)  throws InterruptedException {

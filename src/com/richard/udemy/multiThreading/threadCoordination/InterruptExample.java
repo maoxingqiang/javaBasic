@@ -1,4 +1,4 @@
-package com.richard.udemy.threadCoordination;
+package com.richard.udemy.multiThreading.threadCoordination;
 
 import java.math.BigInteger;
 
@@ -48,7 +48,7 @@ public class InterruptExample {
 
         private BigInteger pow(BigInteger base, BigInteger power) {
             BigInteger result = BigInteger.ONE;
-            for (BigInteger i = BigInteger.ZERO; i.compareTo(power) != 0; i.add(BigInteger.ONE)){
+            for (BigInteger i = BigInteger.ZERO; i.compareTo(power) != 0; i=i.add(BigInteger.ONE)){
                 try {
                     Thread.sleep(5000);
 

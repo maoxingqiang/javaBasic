@@ -1,4 +1,4 @@
-package com.richard.udemy;
+package com.richard.udemy.multiThreading;
 
 import java.util.ArrayList;
 import java.util.List;

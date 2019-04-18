@@ -1,4 +1,4 @@
-package com.richard.udemy;
+package com.richard.udemy.multiThreading;
 
 public class ThreadCreation2 {
 
