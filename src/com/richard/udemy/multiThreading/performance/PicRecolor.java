@@ -30,7 +30,7 @@ public class PicRecolor {
     }
 
     public static void recolorMultiThreaded(BufferedImage originalImage, BufferedImage resultImage, int numberOfThreads)  {
-        List<Thread> threads = new ArrayList<>(); 
+        List<Thread> threads = new ArrayList<>();
         int width = originalImage.getWidth();
         int height = originalImage.getHeight() / numberOfThreads;
         for (int i = 0; i < numberOfThreads; i++) {
